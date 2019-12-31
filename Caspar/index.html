@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+	<meta name="description" content="CASPAR: Extracting and Synthesizing User Stories of Problems from App Reviews">
+	<meta name="keywords" content="Caspar,App Review,Story,Story Understanding,Event Inference,Event Pairs,NLP">
+	<meta name="author" content="Hui Guo NCSU">
+	<meta charset="UTF-8">
+    <title>Hui Guo -at- North Carolina State University</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="Shortcut Icon" type="image/x-icon" href="http://www.ncsu.edu/favicon.ico" />	
+  </head>
+  <body>
+    <div class="container" id="top">
+		
+		<hr style="background-color: #cc0000; height: 5px; border:0px"/>
+		
+		<div style="clear:both;"></div> <!-- This clears the two floats, thus giving "container" layout -->		
+		
+		<div class="header">
+			
+			<div class="header-info">
+				
+				<div>
+				  <h1>
+					CASPAR: Extracting and Synthesizing User Stories of Problems from App Reviews
+					<span>
+						<br/>A framework for extracting and synthesizing user-app interaction stories in app reviews
+						<br/>Including a first step toward event inference in event pairs
+					</span>
+				  </h1>
+				</div>
+			</div>
+        </div>
+		
+		
+		<div style="clear:both;"></div> <!-- This clears the two floats, thus giving "container" layout -->		
+		
+		<div class="body">
+			<div id="abstract">
+				<div class="bodypara-head">Title: Extraction and Inference of Event Pairs in Stories</div>
+				<div class="bodypara-text">
+				<p>
+				<b>Abstract:</b> 
+				A user's review of an app often describes the user's interactions with the app. These interactions, which we interpret as mini stories, are prominent in reviews with negative ratings. 
+In general, a story in an app review would contain at least two types of events: user actions and associated app behaviors. 
+Being able to identify such stories would enable an app's developer in better maintaining and improving the app's functionality and enhancing user experience.
+
+We present CASPAR, a method for extracting and synthesizing user-reported mini stories regarding app problems from reviews. 
+By extending and applying natural language processing techniques, CASPAR extracts ordered events from app reviews, classifies them as user actions or app problems, and synthesizes action-problem pairs. 
+Our evaluation shows that CASPAR is effective in finding action-problem pairs from reviews. First, CASPAR classifies the events with an accuracy of 82.0% on manually labeled data. Second, relative to human evaluators, \framework extracts event pairs with 
+92.9% precision and 34.2% recall. 
+In addition, we train an inference model on the extracted action-problem pairs that automatically predicts possible app problems for different use cases. 
+Preliminary evaluation shows that our method yields promising results. 
+CASPAR illustrates the potential for deeper understanding of app reviews and possibly other natural language artifacts arising in software engineering.
+				</p>
+				
+				<!-- <p>
+				
+				</div> <!-- bodypara-text ends here -->
+			</div> <!-- bio ends here -->
+			
+			<div id="committee">
+				<div class="bodypara-head">Overview</div>
+				<div class="bodypara-text">
+        <img src="./docs/Caspar.png" alt="Caspar Overview">
+				</div>
+			</div> <!-- committee ends here -->
+
+			<div id="paper">
+				<div class="bodypara-head">Data</div>
+				<div class="bodypara-text">
+        <p>We publish the following datasets:</p>
+					<ul>
+						<li>Manually labeled dataset for event type classification: <a href="./docs/Event_Classification_Training_Set.csv">Version 1 (Aug 5th, 2019)</a>-- Submitted version</li>
+					  <li>All other data (393,755 reviews, 1.3 mil events, and 85,099 event pairs):<a href="./docs/ReviewStories.db">Version 1 (Aug 18th, 2019)</a>-- Submitted version</li>
+          </ul>
+				</div>
+			</div> <!-- paper ends here -->
+
+			<div id="slide">
+				<div class="bodypara-head">Slides</div>
+				<div class="bodypara-text">
+					<ul>
+						<li>Available on request</li>
+					</ul>
+				</div>
+			</div> <!-- paper ends here -->
+		
+		</div> <!-- body ends here -->
+        <div class="footer">Hui Guo. Last updated on December 31st, 2019. Template credit: <a href="https://niravajmeri.github.io/">Nirav Ajmeri</a></div>
+    </div>
+  </body>
+</html>
