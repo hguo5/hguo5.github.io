@@ -57,13 +57,12 @@ body{
   width:900px;
   margin:0 auto;
   background-color: #ffffff;
-  margin-top: 5px;
 }
 
 .inbetween{
   width:900px;
   margin:0 auto;
-  font-size:24px;color:#333;text-transform:uppercase;font-family:raleway,sans-serif;font-weight:700;padding-bottom:10px;
+  font-size:24px;color:#333;text-transform:uppercase;font-family:raleway,sans-serif;font-weight:700;
   margin-top: 10px;
 }
 
@@ -72,6 +71,10 @@ div .footer{
   top-margin:10px;
   font-size:8pt; 
   text-align:center;
+}
+
+.pp td, .pp th{
+   padding: 10px;
 }
 
 .person_details{
