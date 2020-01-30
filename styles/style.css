@@ -77,6 +77,11 @@ div .footer{
    padding: 10px;
 }
 
+.pp span{
+	color:#cc0000;
+	font-weight:700;
+}
+
 .person_details{
 	padding: 20px;
 }
