@@ -77,6 +77,11 @@ div .footer{
   text-align:center;
 }
 
+.pp {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
 .pp td, .pp th{
    padding: 10px;
 }
