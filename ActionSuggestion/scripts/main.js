@@ -1,8 +1,9 @@
 var selected = [];
+var freq = [];
 
 $(document).ready(function(){
 	var i;
-	var freq = Array(keywords.length).fill(0);
+	freq = Array(keywords.length).fill(0);
 	for (i=0;i<breaches.length;i++) {
 		bid = breaches[i]["ID"];
 		klist = breaches[i]["BIDs"];
@@ -134,7 +135,9 @@ function getFrequentWords(){
 		if (www<=0){
 			break;
 		}
-		insert_html += "<button onclick=\"addKeywords("+top10[i][0]+")\">" + keywords[top10[i][0]]["K"] + "</button>";
+		insert_html += "<button onclick=\"addKeywords("+top10[i][0]+")\">" + keywords[top10[i][0]]["K"] + 
+					"<span class=\"freq\">" + freq[top10[i][0]] + "</span>" +
+					"</button>";
 	}
 	$("#suggestions").html(insert_html);
 }
