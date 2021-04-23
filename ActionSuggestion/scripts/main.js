@@ -187,7 +187,7 @@ function getSuggestions(){
 	var top10 = items.slice(0, 20);
 	insert_html = "<ul>";
 	for (i=0;i<top10.length;i++) {
-		www = Math.log(top10[i][1])/7.5 + 0.5;
+		www = Math.log(top10[i][1])/7.5 + 1;
 		if (selected.length>1) {
 			www /= selected.length
 		}
