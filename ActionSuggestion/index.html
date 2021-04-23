@@ -1,0 +1,53 @@
+<html>
+  <head>
+	<meta name="description" content="Hui Guo">
+	<meta name="keywords" content="HHS, breach reports, action suggestion">
+	<meta name="author" content="Hui Guo NCSU">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+    <title>Action Suggestion - Hui Guo</title>
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="styles/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="scripts/keywords_info.js"></script>
+	<script src="scripts/breach_keywords.js"></script>
+	<script src="scripts/clusters_0.8.js"></script>
+	<script src="scripts/breach_clusters_0.8.js"></script>
+	<script src="scripts/main.js"></script>
+	<link rel="Shortcut Icon" type="image/x-icon" href="http://www.ncsu.edu/favicon.ico" />	
+  </head>
+  <body>
+  <div class="container" id="top">
+	<div class="row limiting">
+		<div class="col-md-2">Selected key phrases:</div>
+		<div class="col-md-10">
+			<div id="selectedTags">No keywords selected.
+			</div>
+		</div>
+	</div>
+	<div class="row limiting">
+		<div class="col-md-2">Common key phrases to consider:</div>
+		<div class="col-md-10">
+		<div id="suggestions"></div>
+		</div>
+	</div>
+	<div class="row limiting">
+		<div class="col-md-2">Choose key phrases from list:</div>
+		<div class="col-md-10">
+			<div class="dropdown">
+			  <input type="text" placeholder="Search..." id="keyinput" onkeyup="filterFunction()">
+			  <div id="keylist" class="dropdown-content show">
+			  </div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row limiting" style="padding:20px;">
+		<div class="col-md-2">Suggested Actions:</div>
+		<div class="col-md-10" id="suggestionResults">
+		<ul><li>[NONE]<span>0.0000</span></li></ul>
+		</div>
+	</div>
+  </div>
+  </body>
+</html>
