@@ -1,13 +1,24 @@
 var selected = [];
 
 $(document).ready(function(){
-  var i;
-  for (i = 0; i < keywords.length; i++) {
-	  $("#keylist").append("<button id=\"key_"+keywords[i]["ID"]+"\" onclick=\"addKeywords("+keywords[i]["ID"]+")\">" +keywords[i]["K"]+ "<span class=\"checkmark\"><div class=\"checkmark_stem\"></div><div class=\"checkmark_kick\"></div></span></button>");
-  }
+	var i;
+	var freq = Array(keywords.length).fill(0);
+	for (i=0;i<breaches.length;i++) {
+		bid = breaches[i]["ID"];
+		klist = breaches[i]["BIDs"];
+		for (j=0;j<klist.length;j++) {
+			kid = klist[j];
+			freq[kid] += 1;
+		}
+	}
+	for (i = 0; i < keywords.length; i++) {
+		$("#keylist").append("<button id=\"key_"+keywords[i]["ID"]+"\" onclick=\"addKeywords("+keywords[i]["ID"]+")\">" +keywords[i]["K"]+ 
+		"<span class=\"freq\">" + freq[i] + "</span>" +
+		"<span class=\"checkmark\"><div class=\"checkmark_stem\"></div><div class=\"checkmark_kick\"></div></span></button>");
+	}
   
-  getSuggestions();
-  getFrequentWords();
+	getSuggestions();
+	getFrequentWords();
 });
 
 function filterFunction() {
@@ -42,10 +53,10 @@ function addKeywords(key) {
 	
 	for (i = 0; i < keywords.length; i++) {
 		if (selected.indexOf(i) != -1) {
-			$("#key_"+i).find( "span" ).css( "display", "inline-block" );
+			$("#key_"+i).find( ".checkmark" ).css( "display", "inline-block" );
 		}
 		else{
-			$("#key_"+i).find( "span" ).css( "display", "none" );
+			$("#key_"+i).find( ".checkmark" ).css( "display", "none" );
 		}
     }
 	$("#keyinput").val("");
@@ -74,10 +85,10 @@ function removeKeywords(key) {
 		
 	for (i = 0; i < keywords.length; i++) {
 		if (selected.indexOf(i) != -1) {
-			$("#key_"+i).find( "span" ).css( "display", "inline-block" );
+			$("#key_"+i).find( ".checkmark" ).css( "display", "inline-block" );
 		}
 		else{
-			$("#key_"+i).find( "span" ).css( "display", "none" );
+			$("#key_"+i).find( ".checkmark" ).css( "display", "none" );
 		}
 	}
 	
