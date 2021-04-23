@@ -152,6 +152,7 @@ function getSuggestions(){
 		for (j=0;j<selected.length;j++) {
 			if (keywords[selected[j]]["BIDs"].includes(breach_clusters[i]['ID'])){
 				weight *= breach_clusters.length;
+				weight *= keywords[selected[j]]["Weight"];
 			}
 			else {
 				for (k=0;k<keywords[selected[j]]["Sim"].length;k++){
@@ -161,7 +162,8 @@ function getSuggestions(){
 						break;
 					}
 					if (keywords[kid]["BIDs"].includes(breach_clusters[i]['ID'])){
-						weight *= breach_clusters.length * 0.05 * sim;
+						weight *= breach_clusters.length * 0.1 * sim;
+						weight *= keywords[kid]["Weight"];
 						break;
 					}
 				}
