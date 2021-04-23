@@ -36,6 +36,7 @@ function filterFunction() {
       a[i].style.display = "none";
     }
   }
+  $("#keylist").scrollTop(0);
 }
 
 function addKeywords(key) {
