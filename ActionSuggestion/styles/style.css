@@ -1,0 +1,246 @@
+body{
+  font-family:Verdana, Geneva, sans-serif;
+  font-size:10pt;
+  margin:10px;
+  background-color: #F0F0F0;
+  overflow-x:hidden;
+}
+
+.navigaterwrapper {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  display: block;
+  z-index: 1;
+}
+
+
+.navigater {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #d3d3d3;
+  display: block;
+}
+
+.badguy{
+  display: block;
+  color: #CC0000;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  text-transform:uppercase;font-family:raleway,sans-serif;font-weight:700;
+}
+
+.navigater li {
+  float: right;
+}
+
+.navigater li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigater li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.navigater li a.active {
+  color: white;
+  /*background-color: #4CAF50;*/
+  background-color: #CC0000;
+}
+
+.limiting{
+  width:100%;
+  max-width: 900px;
+  margin:0 auto;
+  background-color: #ffffff;
+  padding:10px 20px;
+}
+
+/* The search field */
+#keyinput {
+  box-sizing: border-box;
+  background-image: url("styles/searchicon.png") right top;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  font-size: 14px;
+  padding: 14px 20px 12px 16px;
+  border: 1px solid #ddd;
+  border-bottom: 2px solid #222;
+  width:100%;
+}
+
+/* The search field when it gets focus/clicked on */
+#keyinput:focus {outline: 2px solid #ddd;}
+
+#selectedTags {
+  min-height:65px;
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 10px;
+}
+
+#suggestions {
+  min-height:65px;
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 10px;
+}
+
+#suggestions button {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  border: 1px solid #73AD21;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+#suggestions button:hover {background-color: #f1f1f1}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+/*  position: absolute;*/
+.dropdown-content {
+  display: none;
+  background-color: #f6f6f6;
+  min-width: 120px;
+  height: 180px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content button {
+  color: black;
+  padding: 5px 16px;
+  width: 100%;
+  min-height:35px;
+  text-decoration: none;
+  display: block;
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content button:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.keywordtag {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  border: 1px solid #73AD21;
+  margin-right: 10px;
+}
+
+.close {
+  display: inline-block;
+  cursor: pointer;
+  top: 50%;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+/*.close:hover {background: #bbb;}*/
+
+.checkmark {
+    display:none;
+    width: 20px;
+    height:20px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+.checkmark_stem {
+    position: absolute;
+    width:3px;
+    height:9px;
+    background-color:#0c0;
+    left:11px;
+    top:6px;
+}
+
+.checkmark_kick {
+    position: absolute;
+    width:3px;
+    height:3px;
+    background-color:#0c0;
+    left:8px;
+    top:12px;
+}
+
+#suggestionResults ul{
+  counter-reset: li; 
+  list-style: none; 
+  padding: 0;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+
+#suggestionResults ul li {
+  position: relative;
+  display: block;
+  padding: .4em .4em .4em 2em;
+  margin: .5em 0;
+  background: #3090C7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: .3em;
+  transition: .3s ease-out;
+}
+
+.leftspan {
+  margin-left:0px;
+  margin-right: 10px;
+  background-color: #4CC417;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #111;
+  border: 1px solid #F0F0F0;
+}
+
+
+#suggestionResults ul li span{
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #F0F0F0;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #111;
+  border: 1px solid #73AD21;
+  margin-left:15px;
+}
+
+
+
+
