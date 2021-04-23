@@ -99,8 +99,8 @@ function removeKeywords(key) {
 
 function getFrequentWords(){
 	var kweights = Array(keywords.length).fill(0.0);
-	weight = 1.0;
 	for (i=0;i<breaches.length;i++) {
+		weight = 1.0;
 		bid = breaches[i]["ID"];
 		klist = breaches[i]["BIDs"];
 		if (selected.length>0){
@@ -130,7 +130,7 @@ function getFrequentWords(){
 	var top10 = items.slice(0, 10);
 	insert_html = "";
 	for (i=0;i<top10.length;i++) {
-		www = Math.log(top10[i][1]) + 5;
+		www = Math.log(top10[i][1])/10 + 3;
 		www = Math.round(www*10000)/10000;
 		if (www<=0){
 			break;
@@ -161,7 +161,7 @@ function getSuggestions(){
 						break;
 					}
 					if (keywords[kid]["BIDs"].includes(breach_clusters[i]['ID'])){
-						weight *= breach_clusters.length * 0.25 * sim;
+						weight *= breach_clusters.length * 0.05 * sim;
 						break;
 					}
 				}
