@@ -82,7 +82,7 @@ body{
 
 #selectedTags {
   min-height:65px;
-  border: 1px solid #ddd;
+  border: none;
   width: 100%;
   padding: 10px;
 }
