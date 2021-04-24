@@ -188,14 +188,18 @@ function getSuggestions(){
 	var top10 = items.slice(0, 20);
 	insert_html = "<ul>";
 	for (i=0;i<top10.length;i++) {
-		www = Math.log(top10[i][1])/7.5 + 1;
+		www = Math.log(top10[i][1])/7.5;
 		if (selected.length>0) {
 			sss = 0.0;
 			for (j=0;j<selected.length;j++){
 				sss += keywords[selected[j]]["Weight"];
 			}
+			if (sss < 0.499){
+				sss = 1.0;
+			}
 			www /= sss;
 		}
+		www += 1.0;
 		www = Math.round(www*10000)/10000;
 		if (www<=0)
 			break;
