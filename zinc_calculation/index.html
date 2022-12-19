@@ -1,0 +1,91 @@
+
+<html>
+  <head>
+	<meta name="description" content="计算每年废旧镀锌钢板中的含锌量">
+	<meta name="keywords" content="镀锌, 钢板, 报废, 计算, 正态分布">
+	<meta name="author" content="Hui Guo Quora">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+    <title>计算每年报废废旧镀锌钢板中锌的含量</title>
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="styles/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="scripts/zinc_outputs.js"></script>
+	<script src="scripts/main.js"></script>
+	<link rel="Shortcut Icon" type="image/x-icon" href="styles/favicon.ico" />		
+  </head>
+  <body>
+  <div class="container" id="para">
+  <div class="row">
+  <div class="col-xs-12 col-md-12">
+  <div class="panel panel-primary">
+  	<p class="panel-heading"><strong>参数设定</strong></p>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-1"> </div>
+				<div class="col-md-7">
+					锌产出用于镀锌的比例：<input class="form-control parainput" id="bili" name="bili" required="" type="number" value=0.45></input>
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"> </div>
+				<div class="col-md-7">
+					镀锌钢板每年的锌损失比例：1 / <input class="form-control parainput" id="shouming" name="shouming" value="30" required="" type="number" /> 年
+				</div>
+				<div class="col-md-4"> </div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"> </div>
+				<div class="col-md-7">
+					正态分布参数：σ = <input class="form-control parainput" id="sigma" name="sigma" value="1" required="" type="number" /> 
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"> </div>
+				<div class="col-md-7">
+					正态分布参数：<SPAN STYLE="text-decoration:overline">t</SPAN> = <input class="form-control parainput" id="t" name="t" value="8" required="" type="number" /> (平均报废年限)
+				</div>
+				<div class="col-md-4">
+					<button type="button" class="btn btn-primary" onclick="calculate()">重新计算</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+  <div class="panel panel-primary">
+  	<p class="panel-heading"><strong>结果</strong></p>
+		<div class="panel-body" id="results_by_year">
+				<div class="row">
+				<div class="col-md-2">单位：万吨</div>
+				<div class="col-md-7"><span id="debug"></spam></div>
+				<div class="col-md-3">
+					计算细节年份：<select name="show_year" id="show_year" onchange="calculate()">
+					</select>
+			  </div>
+				</div>
+				<hr>
+		</div>
+		</div>
+	</div>
+	</div>
+
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+  <div class="panel panel-primary" onclick="show_text_results()">
+  	<p class="panel-heading"><strong>文本结果</strong></p>
+  	<div class="panel-body" style="display:none;" id="textual_results">
+  	</div>
+		</div>
+	</div>
+	</div>
+
+</div>
+  </body>
+</html>
