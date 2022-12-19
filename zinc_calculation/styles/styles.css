@@ -1,0 +1,13 @@
+body{
+  font-family:Verdana, Geneva, sans-serif;
+  font-size:10pt;
+  margin:10px;
+  background-color: #F0F0F0;
+  overflow-x:hidden;
+}
+
+.parainput {
+  display: inline;
+  width: 90px;
+  margin-bottom: 10px;
+}
