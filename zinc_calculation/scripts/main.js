@@ -79,7 +79,7 @@ function calculate() {
 		$("#result_"+year).val(0.0.toFixed(5));
 	}
 
-	var text_results = "<p>年份&emsp;报废量</p>";
+	var text_results = "<table class=\"table\"><tr><th>年份</th><th>报废量</th></tr>";
 
 	for (var i = 1; i < YEARS.length; i += 1){
 		var result = 0.0;
@@ -107,8 +107,9 @@ function calculate() {
 			result += ooo;
 		}
 		$("#result_"+YEARS[i]).val(result.toFixed(5));
-		text_results += "<p>" + YEARS[i] + "&emsp;" + result + "</p>";
+		text_results += "<tr><td>" + YEARS[i] + "</td><td>" + result + "</td></tr>";
 	}
+	text_results += "</table>"
 
 	$("#textual_results").html(text_results);
 
