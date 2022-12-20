@@ -110,7 +110,7 @@ function calculate() {
 		text_results += "<p>" + YEARS[i] + "&emsp;" + result + "</p>";
 	}
 
-	$("#textual_results").append(text_results);
+	$("#textual_results").html(text_results);
 
 }
 
