@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
   <head>
-	<meta name="description" content="Caspar: Extracting and Synthesizing User Stories of Problems from App Reviews">
-	<meta name="keywords" content="Caspar,App Review,Story,Story Understanding,Event Inference,Event Pairs,NLP">
+	<meta name="description" content="Ember: Learning Lessons from Breach Reports">
+	<meta name="keywords" content="Ember,Regulatory norms, event extraction, information retrieval, sociotechnical systems, HIPAA, NLP">
 	<meta name="author" content="Hui Guo NCSU">
 	<meta charset="UTF-8">
     <title>Stories in App Reviews</title>
@@ -22,14 +22,14 @@
 				
 				<div>
 				  <h1>
-					Caspar: Extracting and Synthesizing User Stories of Problems from App Reviews
+					Ember: Learning Lessons from Breach Reports
 					<br/>
-					  <span>Hui Guo (<a href="mailto:hguo5@ncsu.edu">hguo5@ncsu.edu</a>)
+					  <span>Hui Guo (<a href="mailto:hguo5@alumni.ncsu.edu">hguo5@alummi.ncsu.edu</a>), 
+						  Vaibhav Garg (<a href="mailto:vgarg3@ncsu.edu">vgarg3@ncsu.edu</a>), 
 					 and Munindar P. Singh (<a href="mailto:mpsingh@ncsu.edu ">mpsingh@ncsu.edu </a>)</span>
 					<br/>
 					  <span>
-						<br/>A framework for extracting and synthesizing user-app interaction stories in app reviews
-						<br/>Including a first step toward event inference in event pairs
+						<br/>A framework for automated information extraction from breach reports, as well as action suggestion toard HIPAA compliance. 
 					</span>
 				  </h1>
 				</div>
@@ -41,43 +41,37 @@
 		
 		<div class="body">
 			<div id="abstract">
-				<div class="bodypara-head">Extracting and Synthesizing User Stories of Problems from App Reviews</div>
+				<div class="bodypara-head">Abstract</div>
 				<div class="bodypara-text">
 				<p>
-				<b>Abstract:</b> 
-A user's review of an app often describes the user's interactions with the app.
-These interactions, which we interpret as mini stories, are prominent in reviews with negative ratings. 
-In general, a story in an app review would contain at least two types of events: user actions and associated app behaviors. 
-Being able to identify such stories would enable an app's developer in better maintaining and improving the app's functionality and enhancing user experience.
-
-We present Caspar, a method for extracting and synthesizing user-reported mini stories regarding app problems from reviews. 
-By extending and applying natural language processing techniques, Caspar extracts ordered events from app reviews, classifies them as user actions or app problems, and synthesizes action-problem pairs. 
-Our evaluation shows that Caspar is effective in finding action-problem pairs from reviews. 
-First, Caspar classifies the events with an accuracy of 82.0% on manually labeled data. 
-Second, relative to human evaluators, Caspar extracts event pairs with 92.9% precision and 34.2% recall. 
-In addition, we train an inference model on the extracted action-problem pairs that automatically predicts possible app problems for different use cases. 
-Preliminary evaluation shows that our method yields promising results. 
-Caspar illustrates the potential for deeper understanding of app reviews and possibly other natural language artifacts arising in software engineering.
+				<b>Context:</b> The U.S. Department of Health and Human Services (HHS) is legally required to publish details of breaches of protected health information (PHI) affecting 500 or more individuals. 
+A report of such a data breach includes actions taken by the responsible party after it, which can inform other parties of how to prevent, mitigate, or recover from similar future breaches. 
+				</p>
+				<p><b>Objective:</b> Our research aims to aid security analysts and software developers in extracting useful actions from breach reports and suggesting actions based on breach descriptions.
+				</p>
+				<p><b>Method:</b> To this end, we propose Ember, an automated approach of extracting information from breach reports and suggesting actions based on the extracted knowledge. 
+First, Ember identifies informative sentences with a classifier. 
+Second, Ember extracts descriptive phrases and useful actions from the informative sentences using NLP techniques. 
+Descriptive phrases are words or phrases that describe a breach. 
+Useful actions are actions in response to the breach and can be considered as security requirements and lessons learned from the stories. 
+Finally, Ember suggests actions based on descriptions of the breach that the responsible party wishes to prevent or remedy. 
+				</p>
+				<p><b>Results:</b> We apply Ember on 3,144 breach reports and build an action suggestion tool. 
+We have conducted a survey to evaluate the effectiveness of Ember and the tool. 
+The survey results show that (1) Ember achieves 78\% recall in information extraction, outperforming average humans, and (2) the tool suggests relevant and helpful actions toward HIPAA compliance.
+				</p>
+				<p><b>Conclusions: </b> Ember is the first work toward automated information extraction from breach reports. 
+Ember presents the extracted information in an easy-to-use action suggestion tool, which helps HIPAA-covered entities comply with regulations and protect health information.
 				</p>
 
 				</div> <!-- bodypara-text ends here -->
 			</div> <!-- bio ends here -->
-			
-			<div id="committee">
-				<div class="bodypara-head">Overview</div>
-				<div class="bodypara-text">
-					<span style="text-align: center;display: block;">
-						<object type="image/svg+xml" data="./docs/Caspar.svg"></object>
-						
-				</div>
-			</div> <!-- committee ends here -->
 
-			<div id="paper">
+			<div id="downloads">
 				<div class="bodypara-head">Downloads</div>
 				<div class="bodypara-text">
         <p>We publish the following datasets:</p>
 					<ul>
-						<li>Manually labeled dataset for event type classification: <a href="./docs/Event_Classification_Training_Set.csv" target="_blank">Version 1 (Aug 5th, 2019)</a>-- Submitted version</li>
 					  <li>All other data (393,755 reviews, 1.3 mil events, 1,500 manual results, and 85,099 event pairs):
 						  <a href="https://drive.google.com/file/d/1-Tc_S0EvHYiDD4rWp98mXuSwisscK5tf/view?usp=sharing" target="_blank">Version 1 (Aug 18th, 2019)</a>
 						  -- Submitted version</li>
@@ -87,19 +81,9 @@ Caspar illustrates the potential for deeper understanding of app reviews and pos
 				</div>
 			</div> <!-- paper ends here -->
 
-			<div id="slide">
-				<div class="bodypara-head">Paper</div>
-				<div class="bodypara-text">
-					<ul>
-						<li>[<a href='https://2020.icse-conferences.org/details/icse-2020-papers/8/Caspar-Extracting-and-Synthesizing-User-Stories-of-Problems-from-App-Reviews' target='_blank'>Details</a>][<a href='docs/Caspar_ICSE_20.pdf'>PDF</a>]
-							<b> Caspar: Extracting and Synthesizing User Stories of Problems from App Reviews.</b>
-			<i>Proceedings of the 42nd IEEE International Conference on Software Engineering (ICSE)</i>, Seoul, May 2020, 1&ndash;13.</li>
-					</ul>
-				</div>
-			</div> <!-- paper ends here -->
 		
 		</div> <!-- body ends here -->
-        <div class="footer">Hui Guo. Last updated on Jun 30th, 2020. Template credit: <a href="https://niravajmeri.github.io/">Nirav Ajmeri</a></div>
+        <div class="footer">Hui Guo. Last updated on Sep 23rd, 2023. Template credit: <a href="https://niravajmeri.github.io/">Nirav Ajmeri</a></div>
     </div>
   </body>
 </html>
