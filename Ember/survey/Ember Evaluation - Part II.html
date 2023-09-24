@@ -1,0 +1,430 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional Bootstrap theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<title> Ember Evaluation - Part II</title>
+</head>
+<body>
+<section class="container" id="DataCollection">
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary">
+<p class="panel-heading"><strong>Survey Part II: Instructions</strong></p>
+<div class="panel-body">
+<p>In this part, you will extract useful actions from five breach reports. Please read each breach report, and <p>
+<ul>
+	<li>write down the useful actions in the reports that are helpful toward HIPAA compliance; and</li>
+	<li>write down the IDs of the sentences that include your answer above.</li>
+</ul>
+<p>Please list <strong>1 - 5</strong> actions per report. <strong>Please rank the actions by their importance, </strong>where the first action is the most important.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary"><span class="panel-heading" style="display: block;"><strong>Breach Report #1</strong></span>
+<div class="panel-body">
+<div id="keywords_1" class="keywords">Keywords:&nbsp;&nbsp;&nbsp;
+<button><span class="keyword">BA</span></button><button><span class="keyword">email phishing scheme</span></button>
+</div>
+	<div id="report_1" class="row">
+		<div class="col-xs-6 col-md-6">
+		<ol class="custom-counter">
+		  <li>The business associate (BA) of a number of covered entities, Acadiana Computer Systems, Inc., reported that it was a victim of an email phishing scheme.</li>
+		  <li>The protected health information (PHI) involved included names, addresses, social security numbers, treatment information, and billing information.</li>
+		  <li>The BA implemented security safeguards and retrained its workforce members to prevent future phishing attacks.</li>
+		  <li>After the breach, the BA migrated its email platform to a more secure environment.</li>
+		  <li>Acadiana notified affected individuals, OCR, and the media of this breach incident.</li>
+		</ol>  
+		</div>
+		<div class="col-xs-6 col-md-6">
+			<label class="statement">What are the most useful actions in this report toward HIPAA compliance (to prevent or remedy the breach)?</label>
+			<textarea type="text" id="answers_1" class="textbox"></textarea>
+			<label class="statement">What are sentences (IDs) that include your answer above?</label>
+			<textarea type="text" id="sentences_1" class="textbox"></textarea>
+			</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary"><span class="panel-heading" style="display: block;"><strong>Breach Report #2</strong></span>
+<div class="panel-body">
+<div id="keywords_2" class="keywords">Keywords:&nbsp;&nbsp;&nbsp;
+<button><span class="keyword">law enforcement official</span></button><button><span class="keyword">paper record</span></button><button><span class="keyword">dumpster</span></button>
+</div>
+	<div id="report_2" class="row">
+		<div class="col-xs-6 col-md-6">
+		<ol class="custom-counter">
+		  <li>Community Mercy Health Partners, the covered entity, (the CE) reported that law enforcement officials found paper records belonging to the CE in a dumpster.</li>
+		  <li>The information consisted of records related to lab studies performed at the CE and included demographic and clinical information such as patient names, addresses, dates of birth, driver's license information, social security numbers, diagnosis and condition information, lab results, medications and other treatment information.</li>
+		  <li>The CE responded to the breach by conducting an investigation to determine the cause of the breach; providing notice to those affected by the breach and providing substitute notice on its website; and offering free credit monitoring to individuals whose social security numbers or financial information may have been compromised by the breach.</li>
+		  <li>The CE took voluntary action to dismiss the subcontractor involved in the breach from all of its projects; re-educating the Property Contractor involved in the breach about business associate agreements and reiterating that training on the handling, storage, and disposal of PHI is required before each project begins; re-educating laboratory leaders and staff on records retention; immediately reducing the number of remaining records slated for long-term storage in accordance with its records retention and disposal policies; and implementing new internal controls to aid in the mitigation of risk.</li>
+		  <li>OCR obtained assurances that the CE implemented the corrective actions noted above.</li>
+		</ol>  
+		</div>
+		<div class="col-xs-6 col-md-6">
+			<label class="statement">What are the most useful actions in this report toward HIPAA compliance (to prevent or remedy the breach)?</label>
+			<textarea type="text" id="answers_2" class="textbox"></textarea>
+			<label class="statement">What are sentences (IDs) that include your answer above?</label>
+			<textarea type="text" id="sentences_2" class="textbox"></textarea>
+			</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary"><span class="panel-heading" style="display: block;"><strong>Breach Report #3</strong></span>
+<div class="panel-body">
+<div id="keywords_3" class="keywords">Keywords:&nbsp;&nbsp;&nbsp;
+<button><span class="keyword">former employee</span></button><button><span class="keyword">possess</span></button><button><span class="keyword">disclosed</span></button><button><span class="keyword">new employer</span></button>
+</div>
+	<div id="report_3" class="row">
+		<div class="col-xs-6 col-md-6">
+		<ol class="custom-counter">
+		  <li>OCR investigated the covered entity (CE), Skin and Cancer Center of Arizona, after the CE reported a breach of 3,311 individuals' protected health information (PHI) that it learned about on July 29, 2015.</li>
+		  <li>A former employee possessed PHI from the CE's office, which was further disclosed to the former employee's new employer after her employment ended on March 18, 2015.</li>
+		  <li>The breach affected patients' names, dates of birth, telephone numbers, insurance company names, and reasons for appointment(s).</li>
+		  <li>The CE provided breach notification to HHS, affected individuals, and the media.</li>
+		  <li>In response to OCR's contact in this matter, the CE retrieved all the breached PHI, ensured the former employee and the former employee's new employer no longer had copies of the PHI, and that they ceased from further use or disclosure of the PHI.</li>
+		  <li>The CE also took steps to retrain workforce members, implemented regular workforce HIPAA reminders, and increased the physical security of its employee workspace.</li>
+		  <li>OCR obtained documentation that the CE implemented these corrective actions.</li>
+		</ol>  
+		</div>
+		<div class="col-xs-6 col-md-6">
+			<label class="statement">What are the most useful actions in this report toward HIPAA compliance (to prevent or remedy the breach)?</label>
+			<textarea type="text" id="answers_3" class="textbox"></textarea>
+			<label class="statement">What are sentences (IDs) that include your answer above?</label>
+			<textarea type="text" id="sentences_3" class="textbox"></textarea>
+			</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary"><span class="panel-heading" style="display: block;"><strong>Breach Report #4</strong></span>
+<div class="panel-body">
+<div id="keywords_4" class="keywords">Keywords:&nbsp;&nbsp;&nbsp;
+<button><span class="keyword">employee</span></button><button><span class="keyword">misuse</span></button><button><span class="keyword">credit card information</span></button><button><span class="keyword">different department</span></button>
+</div>
+	<div id="report_4" class="row">
+		<div class="col-xs-6 col-md-6">
+		<ol class="custom-counter">
+		  <li>Two employees of the covered entity (CE) misused credit card information from several different departments that served approximately 1,076 individuals.</li>
+		  <li>The protected health information (PHI) involved in the breach included names, addresses, and credit card information.</li>
+		  <li>Following the breach, the CE notified the affected individuals, the media, and HHS and offered one free year of credit monitoring to all affected individuals.</li>
+		  <li>The CE also terminated the employees involved, revised its data breach prevention policy, and reviewed the physical processes involved when payment is made in person using a credit card.</li>
+		  <li>OCR reviewed the CE's breach notification policies to assure that they contained the required elements and obtained assurances that the CE provided breach notification.</li>
+		</ol>  
+		</div>
+		<div class="col-xs-6 col-md-6">
+			<label class="statement">What are the most useful actions in this report toward HIPAA compliance (to prevent or remedy the breach)?</label>
+			<textarea type="text" id="answers_4" class="textbox"></textarea>
+			<label class="statement">What are sentences (IDs) that include your answer above?</label>
+			<textarea type="text" id="sentences_4" class="textbox"></textarea>
+			</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary"><span class="panel-heading" style="display: block;"><strong>Breach Report #5</strong></span>
+<div class="panel-body">
+<div id="keywords_5" class="keywords">Keywords:&nbsp;&nbsp;&nbsp;
+<button><span class="keyword">tornado</span></button><button><span class="keyword">struck</span></button><button><span class="keyword">medical record</span></button><button><span class="keyword">storage facility</span></button><button><span class="keyword">BA</span></button><button><span class="keyword">disclosed</span></button>
+</div>
+	<div id="report_5" class="row">
+		<div class="col-xs-6 col-md-6">
+		<ol class="custom-counter">
+		  <li>Shands Lake Shore Regional Medical Center, the covered entity (CE), reported that a tornado struck the medical records storage facility leased by its business associate (BA) which subsequently disclosed the protected health information (PHI) of 651 individuals.</li>
+			<li>The PHI involved included names, Social Security numbers, addresses, dates of birth, medical record numbers, financial information, diagnoses, medications prescribed, and other clinical information.</li>
+			<li>The CE notified HHS, affected individuals, the media, and provided substitute notice on its website.</li>
+			<li>Complimentary identity theft prevention services was also offered to all affected individuals.</li>
+			<li>In its mitigation efforts, the BA securely destroyed the remaining records.</li>
+		</ol>  
+		</div>
+		<div class="col-xs-6 col-md-6">
+			<label class="statement">What are the most useful actions in this report toward HIPAA compliance (to prevent or remedy the breach)?</label>
+			<textarea type="text" id="answers_5" class="textbox"></textarea>
+			<label class="statement">What are sentences (IDs) that include your answer above?</label>
+			<textarea type="text" id="sentences_5" class="textbox"></textarea>
+			</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</section>
+<style type="text/css">
+#submitButton{
+white-space: normal;
+}
+.image{
+margin-bottom: 15px;
+}
+.custom-counter {
+margin-left: 0;
+padding-right: 0;
+list-style-type: none;
+}
+.custom-counter li {
+counter-increment: step-counter;
+margin-bottom: 10px;
+}
+.custom-counter li::before {
+content: counter(step-counter);
+margin-right: 5px;
+font-size: 80%;
+background-color: rgb(200,200,200);
+color: white;
+font-weight: bold;
+padding: 3px 8px;
+border-radius: 3px;
+}
+
+.textbox {
+padding: 16px;
+border: 1px solid #ccc!important;
+border-radius: 16px!important;
+margin: 16px;
+min-height: 100px;
+display: block;
+width: 95%;
+vertical-align: top;
+}
+
+.statement {
+display:block;
+font-size: 14px;
+font-weight: normal;
+margin-bottom:10px;
+}
+
+.likert {
+list-style:none;
+width:100%;
+margin:0;
+margin-bottom: 10px;
+padding:0 0 15px;
+display:block;
+border-bottom:2px solid #efefef;
+}
+
+.likert:last-of-type {border-bottom:0;}
+
+.likert:before {
+content: '';
+position:relative;
+top:11px;
+left:9.5%;
+display:block;
+background-color:#efefef;
+height:4px;
+width:78%;
+}
+
+.likert li {
+display:inline-block;
+width:19%;
+text-align:center;
+vertical-align: top;
+}
+
+.likert li input[type=radio] {
+display:block;
+position:relative;
+top:0;
+left:50%;
+margin-left:-6px;
+}
+
+.likert li label {
+width:100%;
+font-weight: normal;
+}
+
+.likert2 {
+list-style:none;
+width:100%;
+margin:0;
+margin-bottom: 10px;
+padding:0 0 15px;
+display:block;
+border-bottom:2px solid #efefef;
+}
+
+.likert2:last-of-type {border-bottom:0;}
+
+.likert2:before {
+content: '';
+position:relative;
+top:11px;
+left:11.5%;
+display:block;
+background-color:#efefef;
+height:4px;
+width:74%;
+}
+
+.likert2 li {
+display:inline-block;
+width:24%;
+text-align:center;
+vertical-align: top;
+}
+
+.likert2 li input[type=radio] {
+display:block;
+position:relative;
+top:0;
+left:50%;
+margin-left:-6px;
+}
+
+.likert2 li label {
+width:100%;
+font-weight: normal;
+}
+
+.mycheckbox input[type="checkbox"] {
+display: none;
+}
+
+.mycheckbox input[type="checkbox"] + .btn-group > label span {
+width: 20px;
+}
+
+.mycheckbox input[type="checkbox"] + .btn-group > label span:first-child {
+display: none;
+}
+.mycheckbox input[type="checkbox"] + .btn-group > label span:last-child {
+display: inline-block;
+}
+
+.mycheckbox input[type="checkbox"]:checked + .btn-group > label span:first-child {
+display: inline-block;
+}
+.mycheckbox input[type="checkbox"]:checked + .btn-group > label span:last-child {
+display: none;
+}
+
+.keywords {
+  min-height:65px;
+  width: 100%;
+  padding: 10px;
+}
+
+.keywords button {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #73AD21;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.keyword {
+	font-size: 15px;
+	margin: 0px 10px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+</style>
+<script>
+(function() {
+document.getElementById("PageLoadTime").value = ''+Date.now();
+})();
+</script>
+</body>
+</html>

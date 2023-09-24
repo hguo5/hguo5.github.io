@@ -1,0 +1,226 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional Bootstrap theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<title> Ember Evaluation - Tutorial</title>
+</head>
+<body>
+<section class="container" id="DataCollection">
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary">
+<p class="panel-heading"><strong>Instructions</strong></p>
+<div class="panel-body"><span class="collapse-text">Please read the following tutorial about HIPAA, breach reports, and Ember before taking the survey. </span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary"><span class="panel-heading" style="display: block;"><strong>Tutorial - Part I</strong></span>
+
+<div class="panel-body">
+<p><strong>Following are the key concepts that you should know before attempting the survey: </strong></p>
+
+<p><u><strong>HIPAA</strong>:</u> The Health Insurance Portability and Accountability Act of 1996 (HIPAA) is a United States federal statute that protects sensitive patient health information from being disclosed without the patient’s consent or knowledge.</p>
+
+<p><u><strong>HHS</strong> and <strong>HIPAA Privacy Rule</strong>:</u> The US Department of Health and Human Services (HHS) issued the HIPAA Privacy Rule to implement the requirements of HIPAA.</p>
+
+<p><u><strong>Covered Entity</strong>:</u> Covered entities are defined in the HIPAA rules as (1) health plans, (2) health care clearinghouses, and (3) health care providers who electronically transmit any health information in connection with transactions for which HHS has adopted standards.</p>
+
+<p><u><strong>PHI</strong>:</u> PHI stands for Protected Health Information, which is considered to be any identifiable health information that is used, maintained, stored, or transmitted by a HIPAA-covered entity. PHI can be names, credit card information, birth dates, social security numbers, as well as health records, health histories, lab test results, and medical bills. PHI is health information in any form, including physical records, electronic records, or spoken information. </p>
+
+<p><u><strong>Business Associate</strong>:</u> a business associate is a person or entity that provides services to a covered entity that involves the disclosure of PHI.</p>
+
+<p><u><strong>Breach</strong>:</u> a breach is defined as the acquisition, access, use, or disclosure of protected health information in a manner not permitted which compromises the security or privacy of the protected health information.</p>
+
+<p><u><strong>Breach Reports</strong>:</u> According to HIPAA (<a href="https://www.govinfo.gov/app/details/CFR-2011-title45-vol1/CFR-2011-title45-vol1-sec164-408">Claus 45 CFR 164.408</a>), if a breach of unsecured protected health information affects 500 or more individuals, a covered entity must notify HHS  of the breach without unreasonable delay and in no case later than 60 calendar days from the discovery of the breach. As required by section 13402(e)(4) of the HITECH Act, HHS must post a list of breaches of unsecured protected health information affecting 500 or more individuals. <a href="https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf">https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary"><span class="panel-heading" style="display: block;"><strong>Tutorial - Part II</strong></span>
+
+<div class="panel-body">
+<p><strong>An overview of our study: </strong></p>
+
+<p><u><strong>Our goal</strong></u> is to develop scalable methods that can extract HIPAA related information from breach reports. A breach report typically describes what happened during and after a breach, including what the responsible parties did to compensate for the breach and prevent future breaches. The described follow-up actions of the responsible parties are relevant to the specific breach as well as HIPAA compliance. </p>
+
+<p><u><strong>We developed Ember</strong></u>, an automated method of extracting key information from breach reports. Ember first extracts descriptive phrases and actions from the breach reports.The phrases from the same breach report will be considered as relevant. Then, Ember suggests actions that are relevant to the input breach descriptions. </p>
+
+<p>Through this manual study, we are evaluating Ember in two ways. (1) how relevant the suggested actions are to the input breach descriptions and HIPAA compliance. (2) Calculating the extraction performance of Ember in comparison to human annotators. </p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+<style type="text/css">
+#submitButton{
+white-space: normal;
+}
+.image{
+margin-bottom: 15px;
+}
+.custom-counter {
+margin-left: 0;
+padding-right: 0;
+list-style-type: none;
+}
+.custom-counter li {
+counter-increment: step-counter;
+margin-bottom: 10px;
+}
+.custom-counter li::before {
+content: counter(step-counter);
+margin-right: 5px;
+font-size: 80%;
+background-color: rgb(200,200,200);
+color: white;
+font-weight: bold;
+padding: 3px 8px;
+border-radius: 3px;
+}
+
+.textbox {
+padding: 16px;
+border: 1px solid #ccc!important;
+border-radius: 16px!important;
+margin-bottom: 16px
+}
+
+.statement {
+display:block;
+font-size: 14px;
+font-weight: normal;
+margin-bottom:10px;
+}
+
+.likert {
+list-style:none;
+width:100%;
+margin:0;
+margin-bottom: 10px;
+padding:0 0 15px;
+display:block;
+border-bottom:2px solid #efefef;
+}
+
+.likert:last-of-type {border-bottom:0;}
+
+.likert:before {
+content: '';
+position:relative;
+top:11px;
+left:9.5%;
+display:block;
+background-color:#efefef;
+height:4px;
+width:78%;
+}
+
+.likert li {
+display:inline-block;
+width:19%;
+text-align:center;
+vertical-align: top;
+}
+
+.likert li input[type=radio] {
+display:block;
+position:relative;
+top:0;
+left:50%;
+margin-left:-6px;
+}
+
+.likert li label {
+width:100%;
+font-weight: normal;
+}
+
+.likert2 {
+list-style:none;
+width:100%;
+margin:0;
+margin-bottom: 10px;
+padding:0 0 15px;
+display:block;
+border-bottom:2px solid #efefef;
+}
+
+.likert2:last-of-type {border-bottom:0;}
+
+.likert2:before {
+content: '';
+position:relative;
+top:11px;
+left:11.5%;
+display:block;
+background-color:#efefef;
+height:4px;
+width:74%;
+}
+
+.likert2 li {
+display:inline-block;
+width:24%;
+text-align:center;
+vertical-align: top;
+}
+
+.likert2 li input[type=radio] {
+display:block;
+position:relative;
+top:0;
+left:50%;
+margin-left:-6px;
+}
+
+.likert2 li label {
+width:100%;
+font-weight: normal;
+}
+
+.mycheckbox input[type="checkbox"] {
+display: none;
+}
+
+.mycheckbox input[type="checkbox"] + .btn-group > label span {
+width: 20px;
+}
+
+.mycheckbox input[type="checkbox"] + .btn-group > label span:first-child {
+display: none;
+}
+.mycheckbox input[type="checkbox"] + .btn-group > label span:last-child {
+display: inline-block;
+}
+
+.mycheckbox input[type="checkbox"]:checked + .btn-group > label span:first-child {
+display: inline-block;
+}
+.mycheckbox input[type="checkbox"]:checked + .btn-group > label span:last-child {
+display: none;
+}
+
+</style>
+<script>
+(function() {
+document.getElementById("PageLoadTime").value = ''+Date.now();
+})();
+</script>
+</body>
+</html>
